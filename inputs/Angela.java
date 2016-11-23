@@ -1,4 +1,3 @@
-
 public final class Angela {
 	public static int f(int n){
 		  if(n == 0 || n == 1){

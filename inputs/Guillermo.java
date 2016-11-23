@@ -1,6 +1,5 @@
 
 public class Guillermo {
-
 	//magic
 	public static int factoooorial(int numero){
 		
@@ -8,7 +7,6 @@ public class Guillermo {
 		  if(numero == 0 || numero == 1){
 			  
 			  return 1;
-			  
 			  
 		  }
 		  
