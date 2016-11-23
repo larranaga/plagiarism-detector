@@ -60,8 +60,7 @@ public class SuffixArray {
 				idx = i;
 			}
 		}
-		System.out.printf("\nThe LCS is '%s' with length = %d\n",
-			      new String(T).substring(SA[idx], SA[idx] + maxLCP), maxLCP);
+		//System.out.printf("\nThe LCS is '%s' with length = %d\n", new String(T).substring(SA[idx], SA[idx] + maxLCP), maxLCP);
 		return maxLCP;
 	}
 	

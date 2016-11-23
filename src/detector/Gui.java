@@ -7,10 +7,12 @@ import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
 
 public class Gui {
 
 	private JFrame frame;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -45,6 +47,10 @@ public class Gui {
 		
 		JButton btnSelectFolder = new JButton("Select Folder");
 		frame.getContentPane().add(btnSelectFolder, BorderLayout.CENTER);
+		
+		textField = new JTextField();
+		frame.getContentPane().add(textField, BorderLayout.NORTH);
+		textField.setColumns(10);
 	}
 
 }

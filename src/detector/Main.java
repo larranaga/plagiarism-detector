@@ -29,6 +29,10 @@ public class Main {
 		
 		init();
 		ArrayList<File> files = new ArrayList<File>();
+		files.add(new File("./inputs/Larra.java"));
+		files.add(new File("./inputs/Angela.java"));
+		files.add(new File("./inputs/Clara.java"));
+		files.add(new File("./inputs/Guillermo.java"));
 		
 		prepared = new ArrayList<String>();
 		
@@ -57,7 +61,7 @@ public class Main {
 	}
 	
 	public static void cout(double correlation, int file1, int file2){
-		System.out.printf("Los archivos %s y %s tienen una correlaciòn de %f % \n", names.get(file1), names.get(file2), correlation);
+		System.out.printf("Los archivos "+ names.get(file1)+ " y "+ names.get(file2)+ " tienen una correlaciòn de %f porciento \n" , correlation);
 		if(correlation >= 79.0 ){
 			System.out.println("detectado un posible plagio!!!!");
 		}
@@ -97,6 +101,7 @@ public class Main {
 	}
 	
 	public static void init(){
+		names = new ArrayList<String>();
 		tokenizer = new Tokenizer();
 		ids = new HashMap<String, Integer>();
 		tokenizer.add("abstract|assert|String|boolean|break|byte|case|catch|char|class|const|continue|default|do|double|else|enum|extends|final|finally|float|for|goto|if|implements|import|instanceof|int|interface|long|native|new|package|private|protected|public|return|short|static|superstrictfp|switch|synchronizedthis|throw|throws|transient|try|void|volatile|while|System|out|println", 1);
@@ -117,6 +122,8 @@ public class Main {
         tokenizer.add("[0-9]+\\.?[0-9]*", NUMBERTOKEN);
         tokenizer.add("[a-zA-Z][a-zA-Z0-9_]*", IDTOKEN);
         tokenizer.add("[\"\'].*[\"\']", STRINGTOKEN);
+        
+        tokenizer.add("[^a-zA-Z]", 2);
 	}
 	
 }
