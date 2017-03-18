@@ -117,4 +117,8 @@ public class Tokenizer {
 		return tokens;
 	}
 	
+	public void clearTokens(){
+		this.tokens.clear();
+	}
+	
 }
